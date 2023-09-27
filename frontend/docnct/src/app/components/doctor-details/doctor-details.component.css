@@ -1,0 +1,150 @@
+app-doctor-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.doctor-details {
+  flex: 1 1;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 3em;
+  animation: appearFromBottom 0.2s linear;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: appearFromBottom;
+  overflow: auto;
+}
+
+.text-center {
+  width: 322px;
+  /* min-width: 280px; */
+  margin: 0 auto;
+  /* width: 100%; */
+  border-radius: 15px;
+}
+.intro-card {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intro-card-image-wrapper {
+  width: 100%;
+
+  /* width: 322px; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative; */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.intro-doctor-image {
+  /* width: 83px;
+  height: 112px; */
+  /* display: block;
+  z-index: 1; */
+  object-fit: contain;
+  margin-top: -1px;
+
+  max-width: 100%;
+}
+
+.intro-hospital-logo {
+  position: absolute;
+
+  left: 15px;
+  top: 15px;
+  overflow: hidden;
+  display: block;
+}
+
+/* .card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+} */
+.doctor-name {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #000;
+  /* text-align: center; */
+  margin-bottom: 0.5%;
+}
+
+.doctor-qualifications {
+  font-size: 10px;
+  font-weight: 300;
+  color: #6e6e6e;
+  margin-bottom: 1%;
+  display: block;
+}
+
+.question_answer {
+  color: #3e95c3;
+  font-size: 17px;
+}
+
+.languages {
+  font-size: 10px;
+  font-weight: 400;
+  margin-bottom: 0%;
+}
+
+.question_answer,
+.languages,
+.hospital-name,
+.hospital-logo,
+.divider {
+  vertical-align: middle;
+}
+
+.doctor-experience {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 15px;
+  background-color: #1e95b6;
+  border: 1px solid #1e95b6;
+  border-radius: 0.5em;
+  color: white;
+  padding: 0 0.5em;
+  font-weight: 600;
+  min-height: 20px;
+  margin: 0.35em 2em 0em 2em;
+  white-space: nowrap;
+  font-size: 10px;
+  margin-left: 37%;
+}
+
+.doctor-price {
+  font-weight: 600;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.know-more {
+  color: #1e95b6;
+  font-size: 13px;
+  font-weight: 700;
+  /* padding: 1em 1em 0.5em; */
+  margin: 8% 0 -2% 0;
+  border-radius: 0.5em;
+  text-align: center;
+  /* background-position: 50%; */
+  cursor: pointer;
+}

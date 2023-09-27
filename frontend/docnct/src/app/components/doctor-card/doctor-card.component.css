@@ -1,0 +1,235 @@
+/* .background-color {
+  background-color: white;
+  /* background-repeat: no-repeat; */
+/* background-size: cover;
+} */
+.background-color {
+  background-color: white;
+}
+
+.title {
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 3% 0%;
+  padding-left: 3%;
+  padding-top: 1vh;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.list-wrapper {
+  background: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* max-width: 960px; */
+  width: 90%;
+  margin: 0 auto;
+  justify-content: flex-start;
+  background: #f2f2f2;
+  width: 100%;
+  padding: 1em;
+  height: 100%;
+  position: relative;
+  /* overflow: scroll; */
+  overflow: auto;
+  margin-top: 70px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top: none;
+  padding-top: 60px;
+}
+
+.doctor-details {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card {
+  border-radius: 20px;
+  margin-bottom: 3%;
+  min-width: 330px;
+  /* height: 213px; */
+  flex-basis: 25%;
+  box-sizing: border-box;
+  /* padding: 8px; */
+  border: none;
+  margin: 1%;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.doctor-image {
+  object-fit: contain;
+  border: solid 1px #e0e3e6;
+  border-radius: 10%;
+  margin: 10% 5% 5% 5%;
+  /* margin-right: 50px; */
+}
+
+.doctor-experience {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 15px;
+  background-color: #1e95b6;
+  border: 1px solid #1e95b6;
+  border-radius: 0.5em;
+  color: white;
+  padding: 0 0.5em;
+  font-weight: 600;
+  min-height: 20px;
+  margin: 0.35em 2em 0em 2em;
+  white-space: nowrap;
+  font-size: 10px;
+  margin-left: 30px;
+}
+
+.hospital-details {
+  margin-top: 5%;
+  margin-bottom: -10px;
+}
+
+.hospital-logo {
+  justify-content: center;
+}
+
+.divider {
+  justify-content: right;
+  color: #e0e3e6;
+}
+
+.hospital-name {
+  font-size: 10px;
+  font-weight: 300;
+  min-width: 85px;
+  margin-bottom: -3px;
+}
+
+.hospital-city {
+  font-size: 7px;
+  font-weight: 300;
+  min-width: 85px;
+}
+
+.hospital-name,
+.hospital-logo,
+.divider {
+  vertical-align: middle;
+}
+
+/* .card-body {
+  margin-left: -45px;
+} */
+
+.doctor-name {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 1%;
+}
+
+.doctor-qualifications {
+  font-size: 10px;
+  font-weight: 300;
+  color: #6e6e6e;
+  margin-bottom: 1%;
+}
+
+.doctor-specialisation {
+  font-size: 10px;
+  font-weight: 400;
+  margin-bottom: 0%;
+}
+
+.question_answer {
+  color: #3e95c3;
+  font-size: 17px;
+}
+
+.languages {
+  font-size: 10px;
+  font-weight: 400;
+  margin-bottom: 0%;
+}
+
+.question_answer,
+.languages,
+.hospital-name,
+.hospital-logo,
+.divider {
+  vertical-align: middle;
+}
+
+.doctor-price {
+  font-weight: 600;
+}
+
+.button-block button {
+  margin-top: 7%;
+  margin-bottom: 5%;
+  box-sizing: border-box;
+}
+
+.know-more-button {
+  flex: 1;
+  justify-content: center;
+  user-select: none;
+  display: flex;
+  padding: 1em 0.5em;
+  border-radius: 1em;
+  background-color: #f8f8f8;
+  color: #1e95b6;
+  font-weight: 600;
+  max-width: 15em;
+  font-size: 0.7em;
+  border: none;
+  margin-left: 8%;
+  margin-right: 2%;
+}
+
+.consult-now-button {
+  flex: 1;
+  justify-content: center;
+  user-select: none;
+  display: flex;
+  padding: 1em 0.5em;
+  border-radius: 1em;
+  color: white;
+  background: linear-gradient(180deg, #ff7458, #ff5e48);
+  font-weight: 600;
+  max-width: 15em;
+  font-size: 0.7em;
+  white-space: nowrap;
+  background-position: center;
+  will-change: background-color, background-size;
+  transition: background-color 0.7s, background-size 0.7s;
+  margin-left: 2%;
+  margin-right: 8%;
+  border: none;
+}
+
+.consult-now-button:hover {
+  background: #ff7458 radial-gradient(circle, transparent 1%, #ff7458 1%)
+    center/15000%;
+}
+
+@media screen and (max-width: 1300px) {
+  .card {
+    flex-basis: 33%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card {
+    flex-basis: 50%;
+  }
+}
+@media screen and (max-width: 414px) {
+  .card {
+    flex-basis: 100%;
+  }
+}

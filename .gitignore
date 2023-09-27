@@ -1,0 +1,75 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+frontend/docnct/node_modules/
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+frontend/docnct/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System files
+.DS_Store
+Thumbs.db
+
+
+# Spring Boot
+backend/spring-boot-docnct/HELP.md
+backend/spring-boot-docnct/target/
+backend/spring-boot-docnct/!.mvn/wrapper/maven-wrapper.jar
+backend/spring-boot-docnct/!**/src/main/**/target/
+backend/spring-boot-docnct/!**/src/test/**/target/
+
+### STS ###
+backend/spring-boot-docnct/.apt_generated
+backend/spring-boot-docnct/.classpath
+backend/spring-boot-docnct/.factorypath
+backend/spring-boot-docnct/.project
+backend/spring-boot-docnct/.settings
+backend/spring-boot-docnct/.springBeans
+backend/spring-boot-docnct/.sts4-cache
+
+### IntelliJ IDEA ###
+backend/spring-boot-docnct/.idea
+backend/spring-boot-docnct/*.iws
+backend/spring-boot-docnct/*.iml
+backend/spring-boot-docnct/*.ipr
+
+### NetBeans ###
+backend/spring-boot-docnct/nbproject/private/
+backend/spring-boot-docnct/nbbuild/
+backend/spring-boot-docnct/dist/
+backend/spring-boot-docnct/nbdist/
+backend/spring-boot-docnct/.nb-gradle/
+backend/spring-boot-docnct/build/
+backend/spring-boot-docnct/!**/src/main/**/build/
+backend/spring-boot-docnct/!**/src/test/**/build/

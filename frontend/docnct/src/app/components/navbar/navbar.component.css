@@ -1,0 +1,50 @@
+/* body {
+  background-color: white;
+} */
+
+.navbar {
+  background: white;
+}
+
+.navbar-brand {
+  flex: 1;
+}
+
+.navbar-container {
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  height: 60px;
+}
+
+.arrow_back {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.menu-holder {
+  width: 2em;
+  height: 2em;
+  overflow: hidden;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.01);
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 0.4em 2px;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  background-position: 50% center;
+  will-change: background-color, background-size;
+  transition: background-color 0.5s ease 0s, background-size 0.5s ease 0s;
+}
+
+.menu.holder {
+  background: radial-gradient(
+      circle,
+      transparent 1%,
+      rgba(255, 255, 255, 0.1) 0px
+    )
+    50% center / 20000% rgba(255, 255, 255, 0.2);
+}

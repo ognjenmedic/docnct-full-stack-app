@@ -1,0 +1,51 @@
+app-know-more-navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
+  height: 60px;
+}
+
+.arrow_back {
+  padding: 0.5em;
+  width: 0.7em;
+  height: 0.7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white !important;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.01);
+  box-sizing: border-box;
+  box-shadow: 1px 1px 0.4em 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin-left: -163px;
+}
+
+.menu-holder {
+  margin-right: -163px;
+  width: 2em;
+  height: 2em;
+  overflow: hidden;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.01);
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 0.4em 2px;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  background-position: 50% center;
+  will-change: background-color, background-size;
+  transition: background-color 0.5s ease 0s, background-size 0.5s ease 0s;
+}

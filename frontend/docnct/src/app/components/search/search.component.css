@@ -1,0 +1,36 @@
+.search {
+  position: absolute;
+  top: 75px;
+  width: 100%;
+  padding: 0.5em 1em;
+  background: white;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 71px;
+}
+
+.search-holder {
+  width: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-radius: 20px;
+
+  border: 1px solid #e2e2e2;
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.16));
+  padding: 0.5em;
+  overflow: hidden;
+}
+
+.search-input {
+  border-top-right-radius: 20px;
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.16));
+}
+
+.search-icon {
+  color: lightgray;
+  padding: 0 15%;
+}

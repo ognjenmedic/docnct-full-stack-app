@@ -1,0 +1,93 @@
+app-more-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.info-card {
+  margin-bottom: 10%;
+  margin-top: 5%;
+  width: 322px;
+  border-radius: 15px;
+
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fadeAndSlide 0.5s ease forwards;
+}
+
+@keyframes fadeAndSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-specialties {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 0.5em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon {
+  padding-left: 10%;
+  padding-top: 3%;
+}
+.specialty-icon {
+  padding-left: 0%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.description-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  text-align: left;
+  word-wrap: break-word;
+  padding-top: 4%;
+}
+
+.description-bold {
+  font-size: 12px;
+  font-weight: 500;
+  color: #444;
+  padding: 3% 0 5% 0;
+}
+
+.description {
+  font-size: 12px;
+  font-weight: 300;
+  color: #444;
+  padding: 3% 0 5% 0;
+  line-height: 1;
+}
+
+.description-education-bold {
+  font-size: 12px;
+  font-weight: 500;
+  color: #444;
+  padding: 3% 0 0% 0;
+}
+
+.description-education {
+  font-size: 11px;
+  font-weight: 300;
+  color: #444;
+  padding: 3% 0 5% 0;
+  line-height: 1;
+}
