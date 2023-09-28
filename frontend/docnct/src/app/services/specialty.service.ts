@@ -1,15 +1,25 @@
-import { BehaviorSubject, Observable } from 'rxjs';
-import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from "rxjs";
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { Specialty } from "../models/specialty";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class SpecialtyService {
+  baseUrl: string;
   selectedSpecialty: BehaviorSubject<string> | any;
   selectedSpecialty$: Observable<string>;
-  constructor() {
+  constructor(private http: HttpClient) {
+    this.baseUrl = "http://localhost:8080";
     this.selectedSpecialty = new BehaviorSubject(null);
     this.selectedSpecialty$ = this.selectedSpecialty.asObservable();
+  }
+
+  getSpecialties(): Observable<Specialty[]> {
+    return this.http.get<Specialty[]>(
+      `${this.baseUrl}/specialties/findAllSpecialties`
+    );
   }
 
   updateSelectedSpecialty(specialty: string) {
