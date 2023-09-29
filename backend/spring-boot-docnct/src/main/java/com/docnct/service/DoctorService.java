@@ -15,4 +15,9 @@ public class DoctorService {
     public List<Doctor> findAllDoctors(){
         return doctorRepository.findAll();
     }
+
+    public List<Doctor> findBySpecialty(String specialty) {
+        return doctorRepository.findBySpecialty(specialty);
+    }
+
 }

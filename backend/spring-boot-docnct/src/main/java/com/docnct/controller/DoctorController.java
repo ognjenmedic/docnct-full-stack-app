@@ -1,5 +1,6 @@
 package com.docnct.controller;
 
+import org.springframework.web.bind.annotation.RequestParam;
 import com.docnct.entity.Doctor;
 import com.docnct.service.DoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +19,8 @@ public class DoctorController {
 
     @Autowired
     DoctorService doctorService;
-    @GetMapping(value = "findAllDoctors", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Doctor> findAllDoctors(){
-        return doctorService.findAllDoctors();
+    @GetMapping(value = "findBySpecialty", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<Doctor> findBySpecialty(@RequestParam String specialty){
+        return doctorService.findBySpecialty(specialty);
     }
 }

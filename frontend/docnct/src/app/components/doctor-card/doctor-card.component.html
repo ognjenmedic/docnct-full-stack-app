@@ -8,7 +8,7 @@
       *ngIf="specialtyService.selectedSpecialty$ | async as selectedSpecialty"
     >
       <div
-        *ngFor="let doctor of doctors"
+        *ngFor="let doctor of displayedDoctors"
         class="card flex-row flex-wrap"
         routerLink="/doctor-info/{{ doctor.id }}"
       >

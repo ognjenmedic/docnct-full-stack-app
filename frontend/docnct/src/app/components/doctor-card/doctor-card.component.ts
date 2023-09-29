@@ -1,21 +1,22 @@
-import { DOCTORS } from './../../../db-data';
-import { Component, OnDestroy, OnInit, Output } from '@angular/core';
-import { ToggleComponentsService } from 'src/app/services/toggle-components.service';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Doctor } from 'src/app/models/doctor';
-import { DoctorService } from 'src/app/services/doctor.service';
-import { SpecialtyService } from 'src/app/services/specialty.service';
+import { DOCTORS } from "./../../../db-data";
+import { Component, OnDestroy, OnInit, Output } from "@angular/core";
+import { ToggleComponentsService } from "src/app/services/toggle-components.service";
+import { ActivatedRoute, Router } from "@angular/router";
+import { Doctor } from "src/app/models/doctor";
+import { DoctorService } from "src/app/services/doctor.service";
+import { SpecialtyService } from "src/app/services/specialty.service";
 
 @Component({
-  selector: 'app-doctor-card',
-  templateUrl: './doctor-card.component.html',
-  styleUrls: ['./doctor-card.component.css'],
+  selector: "app-doctor-card",
+  templateUrl: "./doctor-card.component.html",
+  styleUrls: ["./doctor-card.component.css"],
 })
 export class DoctorCardComponent implements OnInit, OnDestroy {
   // @Output()
   // doctor!: Doctor;
   selectedDoctor!: Doctor;
   doctors: Doctor[];
+  displayedDoctors: Doctor[];
 
   constructor(
     public toggleComponent: ToggleComponentsService,
@@ -24,7 +25,8 @@ export class DoctorCardComponent implements OnInit, OnDestroy {
     public specialtyService: SpecialtyService,
     public router: Router
   ) {
-    this.doctors = DOCTORS;
+    this.doctors = [];
+    this.displayedDoctors = [];
   }
 
   ngOnInit(): void {
@@ -32,10 +34,18 @@ export class DoctorCardComponent implements OnInit, OnDestroy {
     this.toggleComponent.hideSpecialties();
     this.toggleComponent.showNavbar();
 
-    const specialty = this.route.snapshot.paramMap.get('specialty');
+    const specialty = this.route.snapshot.paramMap.get("specialty");
     if (specialty) {
       this.specialtyService.updateSelectedSpecialty(specialty);
     }
+
+    this.specialtyService.selectedSpecialty$.subscribe((selectedSpecialty) => {
+      this.doctorService
+        .getDoctorsBySpecialty(selectedSpecialty)
+        .subscribe((doctors) => {
+          this.displayedDoctors = doctors;
+        });
+    });
   }
 
   ngOnDestroy(): void {
@@ -46,7 +56,7 @@ export class DoctorCardComponent implements OnInit, OnDestroy {
 
   onClickDoctor(clickedDoctor: Doctor) {
     this.doctorService.setDoctor(clickedDoctor);
-    this.router.navigate(['know-more', clickedDoctor.id]);
+    this.router.navigate(["know-more", clickedDoctor.id]);
   }
 
   onClickToConsult(doctor: Doctor) {
