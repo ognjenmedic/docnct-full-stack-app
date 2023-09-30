@@ -1,19 +1,28 @@
-import { Doctor } from './../../models/doctor';
-import { Component, OnInit } from '@angular/core';
-import { DoctorService } from 'src/app/services/doctor.service';
+import { Doctor } from "./../../models/doctor";
+import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
+import { DoctorService } from "src/app/services/doctor.service";
 
 @Component({
-  selector: 'app-call',
-  templateUrl: './call.component.html',
-  styleUrls: ['./call.component.css'],
+  selector: "app-call",
+  templateUrl: "./call.component.html",
+  styleUrls: ["./call.component.css"],
 })
 export class CallComponent implements OnInit {
   doctor!: Doctor;
-  constructor(private doctorService: DoctorService) {}
+  constructor(
+    private doctorService: DoctorService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    this.doctorService.getDoctor().subscribe((doctor) => {
-      this.doctor = doctor;
+    const doctorId = this.route.snapshot.params["did"];
+    this.fetchDoctor(doctorId);
+  }
+
+  fetchDoctor(doctorId: number) {
+    this.doctorService.getDoctorById(doctorId).subscribe((data) => {
+      this.doctor = data;
     });
   }
 }

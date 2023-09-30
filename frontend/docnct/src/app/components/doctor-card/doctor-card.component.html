@@ -10,7 +10,7 @@
       <div
         *ngFor="let doctor of displayedDoctors"
         class="card flex-row flex-wrap"
-        routerLink="/doctor-info/{{ doctor.id }}"
+        routerLink="/doctor-info/{{ doctor.did }}"
       >
         <ng-container *ngIf="doctor.specialty === selectedSpecialty">
           <div class="doctor-image-wrapper">
@@ -71,8 +71,7 @@
             </div>
             <div class="col-6 d-flex justify-content-center">
               <button
-                routerLink="/call"
-                (click)="onClickToConsult(doctor)"
+                routerLink="/call/{{ doctor.did }}"
                 class="consult-now-button blink"
               >
                 Consult Now

@@ -20,4 +20,8 @@ public class DoctorService {
         return doctorRepository.findBySpecialty(specialty);
     }
 
+    public Doctor findDoctorById(Long did){
+        return doctorRepository.findByDid(did);
+    }
+
 }

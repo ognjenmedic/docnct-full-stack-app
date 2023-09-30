@@ -23,4 +23,10 @@ public class DoctorController {
     public List<Doctor> findBySpecialty(@RequestParam String specialty){
         return doctorService.findBySpecialty(specialty);
     }
+
+    @GetMapping(value = "findDoctorById")
+    public Doctor findDoctorById(@RequestParam("id") Long did) {
+        return doctorService.findDoctorById(did);
+    }
+
 }

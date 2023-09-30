@@ -1,5 +1,7 @@
-<div class="button-block">
+<div *ngIf="doctor" class="button-block">
   <div class="consult-now-container">
-    <div routerLink="/call" class="consult-now-button">Consult Now</div>
+    <div routerLink="/call/{{ doctor.did }}" class="consult-now-button">
+      Consult Now
+    </div>
   </div>
 </div>

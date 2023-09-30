@@ -1,4 +1,4 @@
-import { DOCTORS } from "./../../../db-data";
+// import { DOCTORS } from "./../../../db-data";
 import { Component, OnDestroy, OnInit, Output } from "@angular/core";
 import { ToggleComponentsService } from "src/app/services/toggle-components.service";
 import { ActivatedRoute, Router } from "@angular/router";
@@ -52,11 +52,6 @@ export class DoctorCardComponent implements OnInit, OnDestroy {
     this.toggleComponent.hideHeader();
     this.toggleComponent.hideSpecialties();
     this.toggleComponent.hideNavbar();
-  }
-
-  onClickDoctor(clickedDoctor: Doctor) {
-    this.doctorService.setDoctor(clickedDoctor);
-    this.router.navigate(["know-more", clickedDoctor.id]);
   }
 
   onClickToConsult(doctor: Doctor) {

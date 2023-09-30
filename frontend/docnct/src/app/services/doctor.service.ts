@@ -2,7 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Doctor } from "./../models/doctor";
 import { Injectable } from "@angular/core";
 import { BehaviorSubject, Observable, of } from "rxjs";
-import { DOCTORS } from "src/db-data";
+// import { DOCTORS } from "src/db-data";
 
 @Injectable({
   providedIn: "root",
@@ -31,7 +31,8 @@ export class DoctorService {
   }
 
   getDoctorById(doctorId: number): Observable<Doctor> {
-    const doctor = DOCTORS.find((doctor: any) => doctor.id === doctorId);
-    return of(doctor);
+    const url = `${this.baseUrl}/findDoctorById?id=${doctorId}`;
+    console.log("Fetching doctor from:", url);
+    return this.http.get<Doctor>(url);
   }
 }
