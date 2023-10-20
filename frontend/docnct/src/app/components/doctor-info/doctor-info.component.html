@@ -8,7 +8,10 @@
 
     <div class="info-container">
       <app-how-it-works *ngIf="howItWorksEnabled"></app-how-it-works>
-      <app-more-info *ngIf="!howItWorksEnabled"></app-more-info>
+      <app-more-info
+        *ngIf="!howItWorksEnabled && doctor"
+        [doctor]="doctor"
+      ></app-more-info>
     </div>
 
     <app-consult-button [doctor]="doctor"></app-consult-button>

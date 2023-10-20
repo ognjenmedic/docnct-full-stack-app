@@ -1,16 +1,16 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Doctor } from 'src/app/models/doctor';
-import { DoctorService } from 'src/app/services/doctor.service';
-import { ToggleComponentsService } from 'src/app/services/toggle-components.service';
+import { Component, Input, OnInit } from "@angular/core";
+import { Doctor } from "src/app/models/doctor";
+import { DoctorService } from "src/app/services/doctor.service";
+import { ToggleComponentsService } from "src/app/services/toggle-components.service";
 
 @Component({
-  selector: 'app-know-more',
-  templateUrl: './know-more.component.html',
-  styleUrls: ['./know-more.component.css'],
+  selector: "app-know-more",
+  templateUrl: "./know-more.component.html",
+  styleUrls: ["./know-more.component.css"],
 })
 export class KnowMoreComponent implements OnInit {
-  // @Input()
-  // doctor!: Doctor;
+  @Input()
+  doctor!: Doctor;
   selectedDoctor!: Doctor;
   constructor(
     public toggleComponent: ToggleComponentsService,

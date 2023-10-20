@@ -37,7 +37,9 @@
         {{ doctor.yearsExperience }} years exp
       </button>
       <p class="doctor-price">&euro; {{ doctor.price }}</p>
-      <div (click)="onMoreInfoClicked()" class="know-more">{{ linkText }}</div>
+      <div (click)="onMoreInfoClicked()" class="know-more">
+        {{ linkText }}
+      </div>
     </div>
   </div>
 </ng-container>
