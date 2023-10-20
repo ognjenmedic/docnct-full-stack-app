@@ -26,6 +26,7 @@ import { DoctorService } from "./services/doctor.service";
 import { SpecialtyService } from "./services/specialty.service";
 import { DoctorInfoComponent } from "./components/doctor-info/doctor-info.component";
 import { HttpClientModule } from "@angular/common/http";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -50,7 +51,12 @@ import { HttpClientModule } from "@angular/common/http";
     ConsultButtonComponent,
     DoctorInfoComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+  ],
   providers: [ToggleComponentsService, DoctorService, SpecialtyService],
   bootstrap: [AppComponent],
 })

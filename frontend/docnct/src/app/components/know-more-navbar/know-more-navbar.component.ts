@@ -1,17 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { SpecialtyService } from 'src/app/services/specialty.service';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { SpecialtyService } from "src/app/services/specialty.service";
+import { SlideInAnimation } from "src/app/shared/slide-in.animation";
 
 @Component({
-  selector: 'app-know-more-navbar',
-  templateUrl: './know-more-navbar.component.html',
-  styleUrls: ['./know-more-navbar.component.css'],
+  selector: "app-know-more-navbar",
+  templateUrl: "./know-more-navbar.component.html",
+  styleUrls: ["./know-more-navbar.component.css"],
+  animations: [SlideInAnimation],
 })
 export class KnowMoreNavbarComponent implements OnInit {
+  public showMenu: boolean;
   constructor(
     private router: Router,
     private specialtyService: SpecialtyService
-  ) {}
+  ) {
+    this.showMenu = false;
+  }
 
   ngOnInit(): void {}
 
@@ -19,7 +24,12 @@ export class KnowMoreNavbarComponent implements OnInit {
     this.specialtyService
       .getSelectedSpecialty()
       .subscribe((specialty: any) =>
-        this.router.navigate(['doctor-card', specialty])
+        this.router.navigate(["doctor-card", specialty])
       );
+  }
+
+  toggleMenu() {
+    console.log("Menu icon clicked!"); // This will log to the console when the method is triggered
+    this.showMenu = !this.showMenu;
   }
 }
