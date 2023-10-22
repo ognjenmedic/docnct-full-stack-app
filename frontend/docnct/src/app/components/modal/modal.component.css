@@ -1,0 +1,75 @@
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80%; /* or whatever width you want */
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.5);
+  z-index: 1000; /* to ensure it appears on top */
+  padding: 20px;
+}
+
+.side-menu h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.side-menu ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.login-button {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+.side-menu .close-button {
+  margin-left: 0; /* Remove the fixed margin */
+  margin-right: 32px; /* Add some space on the right */
+
+  width: 2em;
+  height: 2em;
+  overflow: hidden;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.01);
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 0.4em 2px;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  background-position: 50% center;
+  will-change: background-color, background-size;
+  transition: background-color 0.5s ease 0s, background-size 0.5s ease 0s;
+}
+
+.side-menu .blue-line {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* This will push the close button to the right */
+  background-color: #3e95c3;
+  height: 61px;
+  width: 100%;
+}
+
+.side-menu,
+.side-menu .blue-line {
+  margin: 0;
+  padding: 0;
+}

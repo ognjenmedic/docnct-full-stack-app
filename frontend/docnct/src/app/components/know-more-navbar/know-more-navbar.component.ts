@@ -29,7 +29,6 @@ export class KnowMoreNavbarComponent implements OnInit {
   }
 
   toggleMenu() {
-    console.log("Menu icon clicked!"); // This will log to the console when the method is triggered
     this.showMenu = !this.showMenu;
   }
 }
