@@ -1,6 +1,10 @@
-<div *ngIf="showMenu" [@slideIn] class="side-menu">
+<div
+  [@slideIn]="isExiting ? 'void' : '*'"
+  class="side-menu"
+  (@slideIn.done)="animationDone($event)"
+>
   <div class="blue-line">
-    <div class="close-button" (click)="toggleMenu()">
+    <div class="close-button" (click)="onClose()">
       <i class="material-icons">close</i>
     </div>
   </div>

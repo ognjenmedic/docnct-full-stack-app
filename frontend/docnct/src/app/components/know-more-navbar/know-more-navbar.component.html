@@ -2,23 +2,8 @@
   <i class="material-icons arrow_back" (click)="onBackButtonClick()"
     >arrow_back</i
   >
-
   <div class="menu-holder">
     <i class="material-icons menu" (click)="toggleMenu()">menu</i>
   </div>
 </div>
-<div *ngIf="showMenu" [@slideIn] class="side-menu">
-  <div class="blue-line">
-    <div class="close-button" (click)="toggleMenu()">
-      <i class="material-icons">close</i>
-    </div>
-  </div>
-  <h6>Records</h6>
-  <ul>
-    <li>Feature 1</li>
-    <li>Feature 2</li>
-    <li>Feature 3</li>
-    <!-- Add as many bullet points as you like -->
-  </ul>
-  <button class="login-button">Login</button>
-</div>
+<app-modal *ngIf="showMenu" (closed)="closeModal()"></app-modal>

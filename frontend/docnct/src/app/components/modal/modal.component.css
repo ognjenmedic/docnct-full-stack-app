@@ -62,8 +62,8 @@
 .side-menu .blue-line {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* This will push the close button to the right */
-  background-color: #3e95c3;
+  justify-content: flex-end;
+  background-color: #1e95b6;
   height: 61px;
   width: 100%;
 }
