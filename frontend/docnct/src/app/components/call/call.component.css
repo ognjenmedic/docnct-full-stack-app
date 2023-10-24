@@ -1,5 +1,9 @@
+body {
+  margin-top: 100px;
+}
+
 .call-container {
-  position: absolute;
+  /* position: relative; */
   top: 0;
   left: 0;
   width: 100%;
@@ -12,8 +16,18 @@
   align-items: center;
 }
 
+.call-container .background-image {
+  height: auto;
+}
+
+.call-container,
+.call-container * {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 .image-container {
-  position: relative;
+  /* position: relative; */
   width: 100%;
   padding: 0 0.5em;
   overflow: visible;
@@ -62,9 +76,38 @@
   box-sizing: border-box;
   z-index: 1;
   display: block;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   margin: 0 auto;
+}
+
+.phone-number,
+.input-group {
+  width: 100%;
+}
+
+.mobile-emulator {
+  width: 390px; /* iPhone X width */
+  height: 844px; /* iPhone X height */
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  background-color: #fff; /* or any other phone color */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-header,
+.phone-footer {
+  height: 0px; /* Adjust based on your preference */
+  background-color: #000; /* Color of the phone's top and bottom bezels */
+}
+
+.phone-content {
+  flex: 1;
+  overflow-y: auto;
+  height: 100%; /* To ensure it takes the full height of its container minus header and footer */
 }

@@ -1,19 +1,14 @@
 <body class="override-background">
   <div *ngIf="toggleComponent.specialtiesVisible">
     <p class="section-title">Select specialty</p>
-    <div class="specialty-grid row row-cols-3 row-cols-md-4 g-3">
+    <div class="specialty-grid row g-3">
       <div
         *ngFor="let item of specialties"
-        class="col specialty-card"
+        class="col-4 specialty-card"
         routerLink="/doctor-card"
         (click)="selectSpecialty(item.specialty)"
       >
-        <img
-          src="{{ item.image }} "
-          class="card-img-top rounded-4"
-          width="93"
-          alt="..."
-        />
+        <img src="{{ item.image }} " class="card-img-top rounded-4" alt="..." />
         <p class="specialty-name">{{ item.specialty }}</p>
       </div>
     </div>

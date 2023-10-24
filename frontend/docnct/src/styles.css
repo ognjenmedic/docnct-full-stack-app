@@ -1,3 +1,19 @@
+html {
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    #28414e,
+    #472933
+  ); /* Change #333 and #666 to your desired gradient colors */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* This will center the .mobile-emulator on the screen */
+  overflow: hidden;
+  z-index: 1;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 

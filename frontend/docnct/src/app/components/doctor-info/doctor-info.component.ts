@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { Doctor } from "src/app/models/doctor";
 import { DoctorService } from "src/app/services/doctor.service";
+import { ToggleComponentsService } from "src/app/services/toggle-components.service";
 
 @Component({
   selector: "app-doctor-info",
@@ -14,7 +15,8 @@ export class DoctorInfoComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private doctorService: DoctorService
+    private doctorService: DoctorService,
+    private toggleComponentService: ToggleComponentsService
   ) {}
 
   ngOnInit(): void {

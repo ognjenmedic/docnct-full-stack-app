@@ -1,45 +1,51 @@
-<ng-container *ngIf="doctor">
-  <div class="card text-center">
-    <div class="intro-card">
-      <div class="intro-card-image-wrapper row">
-        <div class="col-4 d-flex justify-content-center">
-          <div class="intro-hospital-logo">
-            <img
-              src="/assets/hospitals/RXDXHospital-logo.png"
-              alt=""
-              width="56"
-              height="28"
-            />
+<div class="mobile-emulator">
+  <div class="phone-header"></div>
+  <div class="phone-content">
+    <ng-container *ngIf="doctor">
+      <div class="card text-center">
+        <div class="intro-card">
+          <div class="intro-card-image-wrapper row">
+            <div class="col-4 d-flex justify-content-center">
+              <div class="intro-hospital-logo">
+                <img
+                  src="/assets/hospitals/RXDXHospital-logo.png"
+                  alt=""
+                  width="56"
+                  height="28"
+                />
+              </div>
+            </div>
+            <div class="col-4 px-0 d-flex justify-content-center">
+              <div class="intro-doctor-image align-items-center">
+                <img
+                  src="{{ doctor.doctorImage }}"
+                  alt=""
+                  width="83"
+                  height="112"
+                />
+              </div>
+            </div>
+            <div class="col-4">
+              <div class=""></div>
+            </div>
           </div>
         </div>
-        <div class="col-4 px-0 d-flex justify-content-center">
-          <div class="intro-doctor-image align-items-center">
-            <img
-              src="{{ doctor.doctorImage }}"
-              alt=""
-              width="83"
-              height="112"
-            />
-          </div>
-        </div>
-        <div class="col-4">
-          <div class=""></div>
-        </div>
-      </div>
-    </div>
 
-    <div class="card-body">
-      <p class="doctor-name">{{ doctor.name }}</p>
-      <p class="doctor-qualifications">{{ doctor.qualifications }}</p>
-      <i class="material-icons question_answer">question_answer</i>
-      <span class="languages">&nbsp; {{ doctor.languages }}</span>
-      <button class="doctor-experience">
-        {{ doctor.yearsExperience }} years exp
-      </button>
-      <p class="doctor-price">&euro; {{ doctor.price }}</p>
-      <div (click)="onMoreInfoClicked()" class="know-more">
-        {{ linkText }}
+        <div class="card-body">
+          <p class="doctor-name">{{ doctor.name }}</p>
+          <p class="doctor-qualifications">{{ doctor.qualifications }}</p>
+          <i class="material-icons question_answer">question_answer</i>
+          <span class="languages">&nbsp; {{ doctor.languages }}</span>
+          <button class="doctor-experience">
+            {{ doctor.yearsExperience }} years exp
+          </button>
+          <p class="doctor-price">&euro; {{ doctor.price }}</p>
+          <div (click)="onMoreInfoClicked()" class="know-more">
+            {{ linkText }}
+          </div>
+        </div>
       </div>
-    </div>
+    </ng-container>
   </div>
-</ng-container>
+  <div class="phone-footer"></div>
+</div>

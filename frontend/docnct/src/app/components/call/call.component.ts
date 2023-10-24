@@ -1,3 +1,4 @@
+import { ToggleComponentsService } from "src/app/services/toggle-components.service";
 import { Doctor } from "./../../models/doctor";
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
@@ -12,12 +13,14 @@ export class CallComponent implements OnInit {
   doctor!: Doctor;
   constructor(
     private doctorService: DoctorService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private toggleComponentService: ToggleComponentsService
   ) {}
 
   ngOnInit(): void {
     const doctorId = this.route.snapshot.params["did"];
     this.fetchDoctor(doctorId);
+
   }
 
   fetchDoctor(doctorId: number) {
