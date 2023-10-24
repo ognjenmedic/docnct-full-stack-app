@@ -38,9 +38,9 @@
 }
 
 .side-menu .close-button {
-  margin-left: 0; /* Remove the fixed margin */
-  margin-right: 32px; /* Add some space on the right */
-
+  margin-left: 0;
+  margin-right: 0.7rem;
+  margin-top: 0.5rem;
   width: 2em;
   height: 2em;
   overflow: hidden;
@@ -64,7 +64,7 @@
   align-items: center;
   justify-content: flex-end;
   background-color: #1e95b6;
-  height: 61px;
+  height: 76px;
   width: 100%;
 }
 

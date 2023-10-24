@@ -11,11 +11,12 @@ app-know-more-navbar {
   align-items: center;
   position: relative;
   /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
-  height: 60px;
+  height: 76px;
 }
 
 .arrow_back {
   padding: 0.5em;
+
   width: 0.7em;
   height: 0.7em;
   display: flex;
@@ -27,11 +28,13 @@ app-know-more-navbar {
   box-sizing: border-box;
   box-shadow: 1px 1px 0.4em 2px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  margin-left: -163px;
+  margin-left: -11rem;
+  margin-top: 0.5rem;
 }
 
 .menu-holder {
-  margin-right: -163px;
+  margin-right: -11rem;
+  margin-top: 0.5rem;
   width: 2em;
   height: 2em;
   overflow: hidden;

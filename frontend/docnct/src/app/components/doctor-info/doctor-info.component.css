@@ -32,3 +32,10 @@ body {
   height: 7em;
 }
 /* margin-bottom: 20vh; */
+
+/* @media (max-width: 768px) {
+  .know-more {
+    padding: 0;
+  }
+  /* Add other adjustments for mobile view here 
+} */
