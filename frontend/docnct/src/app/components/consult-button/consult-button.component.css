@@ -1,13 +1,19 @@
 .button-block {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  /* transform: translateX(-50%); */
+  z-index: 1000; /* Ensure it's above other content */
+
   display: flex;
   justify-content: center;
   align-items: center;
   /* margin-top: 10px; */
-  margin-bottom: 5vh;
+  /* margin-bottom: 5vh; */
 
   width: 100%;
   padding: 0.5em;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   left: 0;
   /* box-shadow: -1px -1px 1em 1px rgba(0, 0, 0, 0.15); */
@@ -16,7 +22,7 @@
   align-items: center;
   flex-shrink: 0;
   height: 7em;
-  /* background: linear-gradient(0deg, #000, transparent) !important; */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
 }
 
 .consult-now-button {
@@ -38,4 +44,5 @@
   background-position: 50%;
   will-change: background-color, background-size;
   transition: background-color 0.5s, background-size 0.5s;
+  background-color: #ff6950;
 }

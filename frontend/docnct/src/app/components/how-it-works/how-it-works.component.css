@@ -35,8 +35,7 @@ app-how-it-works {
 .container {
   display: flex;
   flex-direction: column;
-  height: 35vh;
-  max-height: calc(100vh - 250px);
+  flex-grow: 1;
   overflow: hidden;
 }
 

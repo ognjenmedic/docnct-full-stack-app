@@ -34,7 +34,6 @@ app-navbar {
   flex-direction: row;
   flex-wrap: wrap;
   /* max-width: 960px; */
-  width: 90%;
   margin: 0 auto;
   justify-content: center; /* Horizontally center the cards */
   align-items: center; /* Vertically center the cards (if needed) */
@@ -67,8 +66,8 @@ app-navbar {
   box-sizing: border-box;
   /* padding: 8px; */
   border: none;
-  width: calc(100% - 1%); /* If you have a margin of 1% on each side */
-  margin: 1% 1%;
+  width: calc(100% - 2%); /* If you have a margin of 1% on each side */
+  margin: 1%;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
@@ -230,7 +229,7 @@ app-navbar {
 .mobile-emulator {
   width: 390px; /* iPhone X width */
   height: 844px; /* iPhone X height */
-  border-radius: 36px;
+  border-radius: 15px;
   overflow: hidden;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
   background-color: #fff; /* or any other phone color */
@@ -249,17 +248,25 @@ app-navbar {
   height: 100%; /* To ensure it takes the full height of its container minus header and footer */
 }
 
-@media screen and (max-width: 1300px) {
+::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+body {
+  scrollbar-width: none; /* Firefox */
+}
+
+@media screen and (max-width: 1600px) {
   .card {
-    flex-basis: 33%;
+    flex-basis: 100%;
   }
 }
 @media screen and (max-width: 768px) {
   .card {
-    flex-basis: 50%;
+    flex-basis: 100%;
   }
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 414) {
   .card {
     flex-basis: 100%;
   }

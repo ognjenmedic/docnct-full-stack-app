@@ -14,6 +14,9 @@ app-more-info {
   opacity: 0;
   transform: translateY(-50px);
   animation: fadeAndSlide 0.5s ease forwards;
+
+  overflow-y: auto;
+  z-index: 500;
 }
 
 @keyframes fadeAndSlide {
