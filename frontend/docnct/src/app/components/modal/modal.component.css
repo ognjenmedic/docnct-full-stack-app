@@ -1,8 +1,38 @@
+.records-title {
+  color: #000;
+  font-size: 1.2em;
+  font-weight: 500;
+  padding: 0.5em 1em;
+  display: block;
+}
+
+.my-consultations {
+  background-color: rgb(242, 242, 242);
+  height: 60px;
+  transition: all 0.5s ease-in-out; /* Define transition here */
+}
+
+.my-consultations:hover {
+  background: rgb(229, 229, 229);
+}
+
+.cardiology-icon {
+  margin-left: 0.3em;
+  color: dimgray;
+}
+
+/* You can style the text next to the icon if needed */
+.side-menu span {
+  padding: 0.5em;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out 0s;
+}
+
 .side-menu {
   position: absolute;
   top: 0;
   right: 0;
-  width: 80%; /* or whatever width you want */
+  width: 85%; /* or whatever width you want */
   height: 100%;
   background-color: #fff;
   box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.5);
@@ -21,20 +51,40 @@
   margin-bottom: 20px;
 }
 
+.middle-section {
+  flex-grow: 1; /* This ensures the middle section expands to fill available space */
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+  align-items: center; /* Center items horizontally */
+  justify-content: flex-end; /* Push content to the bottom */
+  padding-bottom: 1em; /* Add some padding at the bottom */
+  padding-top: 85%;
+}
+
 .login-button {
-  display: block;
-  width: 100%;
-  padding: 10px 15px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
+  margin: 0 auto;
+  background-color: #fff;
+  width: 60%;
+  padding: 0.65em 1em;
+  /* margin: 0.5em; */
+  border: 1px solid #1e95b6;
+  border-radius: 0.75em;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  font-size: 1em;
+  font-weight: 500;
+  color: #1e95b6;
   text-align: center;
-  transition: background-color 0.3s;
+  cursor: pointer;
+  background-position: 50%;
+  will-change: background-color, background-size;
+  transition: background-color 0.5s, background-size 0.5s;
 }
 
 .login-button:hover {
-  background-color: #0056b3;
+  background: #fff radial-gradient(circle, transparent 1%, #f5f5f5 0) 50%/20000%;
 }
 
 .side-menu .close-button {
@@ -72,4 +122,86 @@
 .side-menu .blue-line {
   margin: 0;
   padding: 0;
+}
+
+.bottom-section {
+  display: flex;
+  flex-direction: row;
+  height: 30%; /* 30% of the modal's height */
+  padding: 0.5em;
+  background-color: #e7f3fb;
+  align-items: center; /* Vertically align items in the center */
+  flex-grow: 2; /* Allow it to grow more than other sections */
+  justify-content: flex-start; /* This ensures that children align to the start/left */
+}
+
+.bottom-section .d-flex {
+  align-items: flex-start;
+  padding-top: 0.5em;
+}
+
+.logo-container,
+.title-container {
+  align-items: flex-start; /* Start alignment on the horizontal axis */
+  flex-direction: row; /* Make them row-direction */
+  margin: 0; /* Remove any default margins */
+  padding: 0; /* Remove any default padding */
+}
+
+.logo-container {
+  flex: 0;
+  display: flex;
+  align-items: center;
+  padding: 0%;
+}
+
+.logo {
+  width: 4em;
+}
+
+.title-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Stack title and subtitle vertically */
+  justify-content: flex-start; /* Start alignment on the vertical axis */
+  align-items: flex-start; /* Vertically centering title and subtitle */
+  /* padding-left: 0.2em; */
+}
+
+.title {
+  color: #333;
+  font-weight: 600;
+  margin: 0;
+  font-size: 0.93em;
+  text-align: left;
+}
+
+.subtitle {
+  color: #333;
+  font-size: 0.8em;
+}
+
+.side-menu .bottom-section .bullet-points {
+  list-style-type: none;
+}
+
+.bullet-points {
+  flex: 3;
+  margin-left: 0; /* Adjust the space for the bullet points */
+  color: #334754;
+  font-size: 0.7em;
+  top: 5em; /* Adjust this value based on the logo's height */
+  list-style-type: none; /* Remove default bullets */
+  padding-left: 0; /* Remove padding */
+  position: relative; /* Change to relative positioning */
+  top: 0; /* Reset top */
+  left: 0; /* Reset left */
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+}
+
+.bullet-points li::before {
+  content: "\2713"; /* Unicode character for checkmark */
+  color: #1e95b6; /* Color of the checkmark */
+  margin-right: 0.5em; /* Space between checkmark and text */
 }
