@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  mysql-container:
+    image: mysql:8
+    environment:
+      MYSQL_DATABASE: docnct_db
+      MYSQL_USER: docnctuser
+      MYSQL_PASSWORD: ${DOCNCT_DB_PASS}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASS}
+    ports:
+      - 3307:3306
+    volumes:
+      - db:/var/lib/mysql
+
+  springboot-container:
+    build: .
+    container_name: springboot-container
+    depends_on:
+      - mysql-container
+    ports:
+      - 8080:8080
+    restart: on-failure
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-container:3306/docnct_db
+      - SPRING_DATASOURCE_USERNAME=docnctuser
+      - SPRING_DATASOURCE_PASSWORD=${DOCNCT_DB_PASS}
+
+volumes:
+  db:
