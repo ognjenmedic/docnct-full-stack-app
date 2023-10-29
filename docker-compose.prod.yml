@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+
+  springboot-container:
+    build:
+      context: ./backend/spring-boot-docnct
+      dockerfile: Dockerfile
+    container_name: springboot-container
+    ports:
+      - 8080:8080
+    restart: on-failure
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://central-db-server.cjcpgmdl6ojz.us-east-1.rds.amazonaws.com:3306/docnct_db?useSSL=false&serverTimezone=UT
+      - SPRING_DATASOURCE_USERNAME=${DB_USER}
+      - SPRING_DATASOURCE_PASSWORD=${DB_PASS}
+
+  angular-container:
+    build:
+      context: ./frontend/docnct
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
