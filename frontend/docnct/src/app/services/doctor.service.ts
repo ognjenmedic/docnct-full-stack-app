@@ -13,7 +13,7 @@ export class DoctorService {
 
   constructor(private http: HttpClient) {
     this.doctor = new BehaviorSubject(null);
-    this.baseUrl = "http://localhost:8080/doctors";
+    this.baseUrl = "http://54.197.133.211:8081/doctors";
   }
 
   getDoctorsBySpecialty(specialty: string): Observable<Doctor[]> {

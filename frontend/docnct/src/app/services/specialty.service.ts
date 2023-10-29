@@ -11,7 +11,7 @@ export class SpecialtyService {
   selectedSpecialty: BehaviorSubject<string> | any;
   selectedSpecialty$: Observable<string>;
   constructor(private http: HttpClient) {
-    this.baseUrl = "http://localhost:8080";
+    this.baseUrl = "http://54.197.133.211:8081";
     this.selectedSpecialty = new BehaviorSubject(null);
     this.selectedSpecialty$ = this.selectedSpecialty.asObservable();
   }

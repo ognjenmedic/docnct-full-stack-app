@@ -75,5 +75,5 @@ backend/spring-boot-docnct/!**/src/main/**/build/
 backend/spring-boot-docnct/!**/src/test/**/build/
 
 # Docker environment file
-backend/spring-boot-docnct/.env
+.env
 
