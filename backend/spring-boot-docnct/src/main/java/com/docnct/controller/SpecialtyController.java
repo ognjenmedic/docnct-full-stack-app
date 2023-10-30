@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("specialties")
-@CrossOrigin(origins="http://localhost")
+@CrossOrigin(origins="http://54.197.133.211")
 public class SpecialtyController {
     @Autowired
     SpecialtyService specialtyService;
