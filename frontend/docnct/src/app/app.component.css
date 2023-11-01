@@ -36,6 +36,16 @@ picture {
   height: 100%; /* To ensure it takes the full height of its container minus header and footer */
 }
 
+.hide-on-mobile {
+  display: none !important;
+}
+
+@media screen and (max-width: 480) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
+
 @media screen and (max-width: 390) {
   .mobile-emulator {
     width: 90vw;
