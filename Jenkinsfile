@@ -5,7 +5,7 @@ pipeline {
         stage('Check AWS CLI') {
             steps {
                 sh 'aws --version'
-                sh 'aws s3 ls'
+
             }
         }
 
@@ -30,8 +30,8 @@ pipeline {
                     sh """
                         export SPRING_DATASOURCE_USERNAME=${dbUser}
                         export SPRING_DATASOURCE_PASSWORD=${dbPass}
-                        docker-compose -f docker-compose-prod.yml build
-                        docker-compose -f docker-compose-prod.yml up -d
+                        docker-compose -f docker-compose.prod.yml build
+                        docker-compose -f docker-compose.prod.yml up -d
                     """
                 }
             }
@@ -40,7 +40,7 @@ pipeline {
     
     post {
         always {
-            sh "docker-compose -f docker-compose-prod.yml down -v"
+            sh "docker-compose -f docker-compose.prod.yml down -v"
         }
     }
 }
