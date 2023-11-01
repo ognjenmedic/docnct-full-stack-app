@@ -24,12 +24,16 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'myRDSSecret', usernameVariable: 'DB_USER', passwordVariable: 'DB_PASS')]) {
                     script {
-                        sh """
-                            export SPRING_DATASOURCE_USERNAME=$DB_USER
-                            export SPRING_DATASOURCE_PASSWORD=$DB_PASS
-                            docker-compose -f docker-compose.prod.yml build
-                            docker-compose -f docker-compose.prod.yml up -d
-                        """
+                        // Diagnostic steps
+                        sh "ls -al" // List everything in the current directory
+                        sh "ls -al backend/spring-boot-docnct/target/" // List contents of target directory
+                        
+                        withEnv(["SPRING_DATASOURCE_USERNAME=${DB_USER}", "SPRING_DATASOURCE_PASSWORD=${DB_PASS}"]) {
+                            sh """
+                                docker-compose -f docker-compose.prod.yml build
+                                docker-compose -f docker-compose.prod.yml up -d
+                            """
+                        }
                     }
                 }
             }
