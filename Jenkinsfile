@@ -5,7 +5,6 @@ pipeline {
         stage('Check AWS CLI') {
             steps {
                 sh 'aws --version'
-
             }
         }
 
@@ -23,21 +22,20 @@ pipeline {
 
         stage('Build & Deploy with Docker Compose') {
             steps {
-                script {
-                    def dbUser = sh(script: "echo $RDS_SECRET | jq -r .username", returnStdout: true).trim()
-                    def dbPass = sh(script: "echo $RDS_SECRET | jq -r .password", returnStdout: true).trim()
-
-                    sh """
-                        export SPRING_DATASOURCE_USERNAME=${dbUser}
-                        export SPRING_DATASOURCE_PASSWORD=${dbPass}
-                        docker-compose -f docker-compose.prod.yml build
-                        docker-compose -f docker-compose.prod.yml up -d
-                    """
+                withCredentials([usernamePassword(credentialsId: 'myRDSSecret', usernameVariable: 'DB_USER', passwordVariable: 'DB_PASS')]) {
+                    script {
+                        sh """
+                            export SPRING_DATASOURCE_USERNAME=$DB_USER
+                            export SPRING_DATASOURCE_PASSWORD=$DB_PASS
+                            docker-compose -f docker-compose.prod.yml build
+                            docker-compose -f docker-compose.prod.yml up -d
+                        """
+                    }
                 }
             }
         }
     }
-    
+
     post {
         always {
             sh "docker-compose -f docker-compose.prod.yml down -v"
