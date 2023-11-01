@@ -41,8 +41,11 @@ pipeline {
                         
                         withEnv(["SPRING_DATASOURCE_USERNAME=${DB_USER}", "SPRING_DATASOURCE_PASSWORD=${DB_PASS}"]) {
                             sh """
+                                docker stop springboot-container || true
+                                docker rm springboot-container || true
                                 docker-compose -f docker-compose.prod.yml build
                                 docker-compose -f docker-compose.prod.yml up -d
+
                             """
                         }
                     }
