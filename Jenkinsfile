@@ -22,7 +22,7 @@ pipeline {
 
         stage('Maven Build') {
             tools {
-                maven 'Auto Maven'
+                maven 'M3'
             }
             steps {
                 dir('backend/spring-boot-docnct') {
