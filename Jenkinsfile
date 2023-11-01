@@ -20,6 +20,17 @@ pipeline {
             }
         }
 
+        stage('Maven Build') {
+            tools {
+                maven 'Auto Maven'
+            }
+            steps {
+                dir('backend/spring-boot-docnct') {
+                    sh 'mvn clean package'
+                }
+            }
+        }
+
         stage('Build & Deploy with Docker Compose') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'myRDSSecret', usernameVariable: 'DB_USER', passwordVariable: 'DB_PASS')]) {
