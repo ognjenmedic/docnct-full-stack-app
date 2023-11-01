@@ -44,6 +44,7 @@ pipeline {
                                 docker stop springboot-container || true
                                 docker rm springboot-container || true
                                 docker-compose -f docker-compose.prod.yml build
+                                docker-compose -f docker-compose.prod.yml down
                                 docker-compose -f docker-compose.prod.yml up -d
 
                             """
