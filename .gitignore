@@ -48,6 +48,7 @@ backend/spring-boot-docnct/target/
 backend/spring-boot-docnct/!.mvn/wrapper/maven-wrapper.jar
 backend/spring-boot-docnct/!**/src/main/**/target/
 backend/spring-boot-docnct/!**/src/test/**/target/
+backend/spring-boot-docnct/src/main/resources/application-dev.properties
 
 ### STS ###
 backend/spring-boot-docnct/.apt_generated
