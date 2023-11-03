@@ -2,6 +2,7 @@ import { BehaviorSubject, Observable } from "rxjs";
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Specialty } from "../models/specialty";
+import { environment } from "src/environments/environment";
 
 @Injectable({
   providedIn: "root",
@@ -11,7 +12,7 @@ export class SpecialtyService {
   selectedSpecialty: BehaviorSubject<string> | any;
   selectedSpecialty$: Observable<string>;
   constructor(private http: HttpClient) {
-    this.baseUrl = "http://54.197.133.211:8081";
+    this.baseUrl = environment.apiBaseUrl;
     this.selectedSpecialty = new BehaviorSubject(null);
     this.selectedSpecialty$ = this.selectedSpecialty.asObservable();
   }

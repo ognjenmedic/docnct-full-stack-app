@@ -2,6 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Doctor } from "./../models/doctor";
 import { Injectable } from "@angular/core";
 import { BehaviorSubject, Observable, of } from "rxjs";
+import { environment } from "src/environments/environment";
 // import { DOCTORS } from "src/db-data";
 
 @Injectable({
@@ -13,7 +14,7 @@ export class DoctorService {
 
   constructor(private http: HttpClient) {
     this.doctor = new BehaviorSubject(null);
-    this.baseUrl = "http://54.197.133.211:8081/doctors";
+    this.baseUrl = `${environment.apiBaseUrl}/doctors`;
   }
 
   getDoctorsBySpecialty(specialty: string): Observable<Doctor[]> {
