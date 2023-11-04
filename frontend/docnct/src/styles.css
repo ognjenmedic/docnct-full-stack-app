@@ -7,15 +7,22 @@ html {
     #28414e,
     #472933
   ); /* Change #333 and #666 to your desired gradient colors */
-  display: flex;
-  justify-content: center;
-  align-items: center; /* This will center the .mobile-emulator on the screen */
+
   overflow: hidden;
   z-index: 1;
 }
 
+/* @media screen and (max-width: 480px) {
+  html {
+    background: transparent;
+  }
+} */
+
 body {
   font-family: "Poppins", sans-serif;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
 
   /* background-image: url("/assets/doctor-bg@1x.472479ac.png");
   background-repeat: no-repeat;

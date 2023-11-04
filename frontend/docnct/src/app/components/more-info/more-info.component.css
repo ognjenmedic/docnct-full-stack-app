@@ -6,9 +6,12 @@ app-more-info {
 }
 
 .info-card {
-  margin-bottom: 10%;
-  margin-top: 5%;
-  width: 322px;
+  margin: 5% auto 10%; /* Top and bottom margin with auto horizontal margin */
+  max-width: none; /* Allow it to stretch as needed on small screens */
+  width: 100%; /* Use full width on small screens */
+  width: calc(
+    100% - 1em
+  ); /* Full width minus some padding on smaller screens */
   border-radius: 15px;
 
   opacity: 0;
@@ -93,4 +96,12 @@ app-more-info {
   color: #444;
   padding: 3% 0 5% 0;
   line-height: 1;
+}
+
+@media (max-width: 600px) {
+  .info-card {
+    margin: 5% auto; /* Adjust margin to ensure it is centered and has less space at the bottom */
+    max-width: none; /* Allow it to stretch as needed on small screens */
+    width: 100%; /* Use full width on small screens */
+  }
 }

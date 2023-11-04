@@ -1,100 +1,88 @@
-<div class="mobile-emulator">
-  <div class="phone-header"></div>
-  <div class="phone-content">
-    <app-navbar></app-navbar>
-    <app-search></app-search>
+<app-navbar></app-navbar>
+<app-search></app-search>
 
-    <div style="background: white">
-      <div class="list-wrapper">
-        <span class="title">Showing earliest available doctors near you</span>
+<div style="background: white">
+  <div class="list-wrapper">
+    <span class="title">Showing earliest available doctors near you</span>
 
-        <ng-container
-          *ngIf="
-            specialtyService.selectedSpecialty$ | async as selectedSpecialty
-          "
-        >
-          <div
-            *ngFor="let doctor of displayedDoctors"
-            class="card flex-row flex-wrap"
-            routerLink="/doctor-info/{{ doctor.did }}"
-          >
-            <ng-container *ngIf="doctor.specialty === selectedSpecialty">
-              <div class="doctor-image-wrapper">
-                <img
-                  src="{{ doctor.doctorImage }}"
-                  width="122"
-                  height="120"
-                  class="doctor-image"
-                  alt="..."
-                />
-                <button class="doctor-experience">
-                  {{ doctor.yearsExperience }} years exp
-                </button>
-              </div>
-              <div class="card-block px-3">
-                <div class="hospital-details row">
-                  <div class="col-5 d-flex justify-content-center">
-                    <div class="hospital-logo">
-                      <img src="{{ doctor.logoHospital }}" alt="" width="20" />
-                    </div>
-                  </div>
-                  <div class="col-1 px-0 d-flex justify-content-right">
-                    <div class="divider align-items-center">
-                      <p>|</p>
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <div
-                      class="hospital-name align-items-center justify-content-left"
-                    >
-                      <span>{{ doctor.hospital }} </span>
-                    </div>
-                    <div
-                      class="hospital-city align-items-center justify-content-left"
-                    >
-                      <span>{{ doctor.location }} </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="doctor-details row">
-                  <div class="col-sm-12">
-                    <div class="card-body p-0">
-                      <h5 class="doctor-name">{{ doctor.name }}</h5>
-                      <p class="doctor-qualifications">
-                        {{ doctor.qualifications }}
-                      </p>
-                      <p class="doctor-specialisation">
-                        {{ doctor.specialty }}
-                      </p>
-                      <i class="material-icons question_answer"
-                        >question_answer</i
-                      >
-                      <span class="languages"
-                        >&nbsp; {{ doctor.languages }}</span
-                      >
-                      <p class="doctor-price">&euro; {{ doctor.price }}</p>
-                    </div>
-                  </div>
+    <ng-container
+      *ngIf="specialtyService.selectedSpecialty$ | async as selectedSpecialty"
+    >
+      <div
+        *ngFor="let doctor of displayedDoctors"
+        class="card flex-row flex-wrap"
+        routerLink="/doctor-info/{{ doctor.did }}"
+      >
+        <ng-container *ngIf="doctor.specialty === selectedSpecialty">
+          <div class="doctor-image-wrapper">
+            <img
+              src="{{ doctor.doctorImage }}"
+              width="122"
+              height="120"
+              class="doctor-image"
+              alt="..."
+            />
+            <button class="doctor-experience">
+              {{ doctor.yearsExperience }} years exp
+            </button>
+          </div>
+          <div class="card-block px-3">
+            <div class="hospital-details row">
+              <div class="col-5 d-flex justify-content-center">
+                <div class="hospital-logo">
+                  <img src="{{ doctor.logoHospital }}" alt="" width="20" />
                 </div>
               </div>
-              <div class="button-block d-flex justify-content-center w-100">
-                <div class="col-6 d-flex justify-content-center">
-                  <button class="know-more-button">Know More</button>
-                </div>
-                <div class="col-6 d-flex justify-content-center">
-                  <button
-                    routerLink="/call/{{ doctor.did }}"
-                    class="consult-now-button blink"
-                  >
-                    Consult Now
-                  </button>
+              <div class="col-1 px-0 d-flex justify-content-right">
+                <div class="divider align-items-center">
+                  <p>|</p>
                 </div>
               </div>
-            </ng-container>
+              <div class="col-6">
+                <div
+                  class="hospital-name align-items-center justify-content-left"
+                >
+                  <span>{{ doctor.hospital }} </span>
+                </div>
+                <div
+                  class="hospital-city align-items-center justify-content-left"
+                >
+                  <span>{{ doctor.location }} </span>
+                </div>
+              </div>
+            </div>
+            <div class="doctor-details row">
+              <div class="col-sm-12">
+                <div class="card-body p-0">
+                  <h5 class="doctor-name">{{ doctor.name }}</h5>
+                  <p class="doctor-qualifications">
+                    {{ doctor.qualifications }}
+                  </p>
+                  <p class="doctor-specialisation">
+                    {{ doctor.specialty }}
+                  </p>
+                  <i class="material-icons question_answer">question_answer</i>
+                  <span class="languages">&nbsp; {{ doctor.languages }}</span>
+                  <p class="doctor-price">&euro; {{ doctor.price }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="button-block d-flex justify-content-center w-100">
+            <div class="col-6 d-flex justify-content-center">
+              <button class="know-more-button">Know More</button>
+            </div>
+            <div class="col-6 d-flex justify-content-center">
+              <button
+                routerLink="/call/{{ doctor.did }}"
+                class="consult-now-button blink"
+              >
+                Consult Now
+              </button>
+            </div>
           </div>
         </ng-container>
       </div>
-    </div>
+    </ng-container>
   </div>
-  <div class="phone-footer"></div>
 </div>

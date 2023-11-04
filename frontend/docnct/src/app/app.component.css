@@ -3,6 +3,14 @@ picture {
   width: 100%;
 }
 
+/* General styles for body content */
+.body-content {
+  flex-grow: 1; /* Grow to fill the space */
+  display: flex;
+  flex-direction: column;
+  max-height: 100%; /* Change this from 100vh to 100% */
+}
+
 .background-image {
   background-image: url("/assets/doctor-bg@1x.472479ac.png");
   background-repeat: no-repeat;
@@ -31,22 +39,11 @@ picture {
 }
 
 .phone-content {
-  flex: 1;
-  overflow-y: auto;
-  height: 100%; /* To ensure it takes the full height of its container minus header and footer */
-}
-
-@media screen and (max-width: 390) {
-  .mobile-emulator {
-    width: 90vw;
-    height: calc(90vw * 2.169);
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .mobile-emulator {
-    transform: translate(-50%, -50%) scale(0.78); /* Adjust the scale value as necessary */
-  }
+  display: flex; /* Make sure it's a flex container */
+  flex-direction: column; /* Stack children vertically */
+  flex: 1; /* Flex children should expand to fill the container */
+  height: 100%; /* Fill the height */
+  overflow-y: auto; /* Scroll if needed */
 }
 
 ::-webkit-scrollbar {
@@ -55,4 +52,30 @@ picture {
 
 body {
   scrollbar-width: none; /* Firefox */
+}
+
+/* Style overrides for mobile screens */
+@media screen and (max-width: 600px) {
+  .mobile-emulator {
+    width: auto;
+    height: 100vh; /* Take full height of the viewport */
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent; /* or any other color that matches your design */
+    position: static;
+    transform: none;
+  }
+
+  .phone-header,
+  .phone-footer {
+    display: none; /* Hide the phone header and footer on actual mobile devices */
+  }
+
+  .phone-content {
+    height: auto; /* Allow it to expand as needed */
+    overflow-y: auto; /* Add scrolling if content is taller than the screen */
+    margin-top: 0; /* Remove any top margin */
+    margin-bottom: 0; /* Remove any bottom margin */
+  }
 }

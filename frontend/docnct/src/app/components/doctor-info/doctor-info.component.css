@@ -1,26 +1,38 @@
 body {
   height: 100vh;
-
   min-height: 100%;
+  min-width: 100%;
 }
 
+html,
+body,
+.know-more,
+.content-wrapper,
+.app-consult-button {
+  box-sizing: border-box; /* Include padding and borders in element's total width and height */
+}
 .know-more {
   /* overflow: hidden; */
   width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
   /* height: 100vh; */
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 100vh;
-  height: calc(100% - 7em);
+  /* height: 100vh;
+  height: calc(100% - 7em); */
+  min-height: 100vh; /* Use min-height instead of height */
+  min-width: 100%;
 }
 
 .content-wrapper {
   position: relative;
   flex-grow: 1;
   overflow-y: auto;
+  width: 100%; /* Ensure it takes the full width */
   /* height: calc(100% - 7em); */
 }
 
@@ -28,10 +40,12 @@ body {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  width: 100%; /* Ensure it takes the full width */
 }
 
 .info-container {
   position: relative;
+  flex-grow: 1; /* This will make sure it expands to fill available space */
   /* margin-bottom: 7em; */
   /* height: calc(50% - 3.5em); */
 }
@@ -56,36 +70,23 @@ body {
   /* Add other adjustments for mobile view here 
 } */
 
-.mobile-emulator {
-  width: 390px; /* iPhone X width */
-  height: 844px; /* iPhone X height */
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-  margin: auto; /* Center the emulator on the page */
-  background-color: #fff; /* or any other phone color */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.87); /* Adjust the scale value as necessary */
-}
-
-.phone-header,
-.phone-footer {
-  height: 0px; /* Adjust based on your preference */
-  background-color: #000; /* Color of the phone's top and bottom bezels */
-}
-
-.phone-content {
-  flex: 1;
-  overflow-y: auto;
-  height: 100%; /* To ensure it takes the full height of its container minus header and footer */
-}
-
 ::-webkit-scrollbar {
   display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
 }
 
 body {
   scrollbar-width: none; /* Firefox */
+}
+
+@media (max-width: 600px) {
+  .know-more {
+    padding-bottom: 7em; /* Add padding-bottom equal to the height of the consult button */
+  }
+
+  .app-consult-button {
+    position: fixed; /* Keep fixed to the bottom */
+    bottom: 0;
+    left: 0; /* Ensure it spans the full width */
+    width: 100%; /* Span the full width of the viewport */
+  }
 }

@@ -1,28 +1,22 @@
-<div class="mobile-emulator">
-  <div class="phone-header"></div>
-  <div class="phone-content">
-    <div *ngIf="doctor" class="call-container flex">
-      <div class="image-container">
-        <div class="doctor-info">
-          <img class="doctor-image" src="{{ doctor.doctorImage }} " alt="" />
-          <p class="doctor-name">Dr. {{ doctor.name }}'s Consultation Room</p>
-        </div>
-        <div class="phone-number">
-          <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Login:</span>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Enter phone to log in"
-              aria-label="Username"
-              aria-describedby="basic-addon1"
-              onfocus="this.placeholder = ''"
-              onblur="this.placeholder = 'Enter phone to log in'"
-            />
-          </div>
-        </div>
+<div *ngIf="doctor" class="call-container flex">
+  <div class="image-container">
+    <div class="doctor-info">
+      <img class="doctor-image" src="{{ doctor.doctorImage }} " alt="" />
+      <p class="doctor-name">Dr. {{ doctor.name }}'s Consultation Room</p>
+    </div>
+    <div class="phone-number">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Login:</span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter phone to log in"
+          aria-label="Username"
+          aria-describedby="basic-addon1"
+          onfocus="this.placeholder = ''"
+          onblur="this.placeholder = 'Enter phone to log in'"
+        />
       </div>
     </div>
   </div>
-  <div class="phone-footer"></div>
 </div>
