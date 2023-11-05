@@ -28,6 +28,7 @@ import { DoctorInfoComponent } from "./components/doctor-info/doctor-info.compon
 import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ModalComponent } from "./components/modal/modal.component";
+import { GetTheAppButtonComponent } from './components/get-the-app-button/get-the-app-button.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { ModalComponent } from "./components/modal/modal.component";
     ConsultButtonComponent,
     DoctorInfoComponent,
     ModalComponent,
+    GetTheAppButtonComponent,
   ],
   imports: [
     BrowserModule,

@@ -27,7 +27,7 @@
     <!-- This will take up the remaining space before the hamburger -->
   </div>
 
-  <div class="bottom-section d-flex flex-column">
+  <div class="bottom-section d-flex flex-column position-relative">
     <!-- Logo and Title/Subtitle Row -->
     <div class="d-flex">
       <!-- Logo -->
@@ -43,10 +43,29 @@
     </div>
 
     <!-- Bullet Points -->
-    <ul class="bullet-points">
-      <li>Earn doCnct coins when consulting via the app</li>
-      <li>High-Quality video consultations and personalised experience</li>
-      <li>Quick payment procedure and faster performance</li>
-    </ul>
+    <div class="bullet-points">
+      <div class="d-flex align-items-center">
+        <!-- Icon -->
+        <span class="material-symbols-outlined" id="bullet-icon"> done </span>
+      </div>
+      <!-- Text -->
+      <span>Earn doCnct coins when consulting via the app</span>
+
+      <div class="d-flex align-items-center">
+        <!-- Icon -->
+        <span class="material-symbols-outlined" id="bullet-icon"> done </span>
+      </div>
+      <!-- Text -->
+      <span>High-Quality video consultations and personalised experience</span>
+
+      <div class="d-flex align-items-center">
+        <!-- Icon -->
+        <span class="material-symbols-outlined" id="bullet-icon"> done </span>
+      </div>
+      <!-- Text -->
+      <span>Quick payment procedure and faster performance</span>
+    </div>
+
+    <app-get-the-app-button></app-get-the-app-button>
   </div>
 </div>

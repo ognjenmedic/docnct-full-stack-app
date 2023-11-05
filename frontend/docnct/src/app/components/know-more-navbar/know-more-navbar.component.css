@@ -9,9 +9,10 @@ app-know-more-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: fixed;
   /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
   height: 76px;
+  z-index: 1000; /* Set a high z-index value to ensure it's on top */
 }
 
 .arrow_back {
@@ -28,12 +29,12 @@ app-know-more-navbar {
   box-sizing: border-box;
   box-shadow: 1px 1px 0.4em 2px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  margin-left: -11rem;
+  /* margin-left: -11rem; */
   margin-top: 0.5rem;
 }
 
 .menu-holder {
-  margin-right: -11rem;
+  /* margin-right: -11rem; */
   margin-top: 0.5rem;
   width: 2em;
   height: 2em;

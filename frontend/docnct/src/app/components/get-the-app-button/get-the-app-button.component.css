@@ -1,0 +1,26 @@
+.get-the-app-button {
+  flex: 1;
+  justify-content: center;
+  user-select: none;
+  display: flex;
+  padding: 1.2em 1em;
+  border-radius: 1em;
+  color: white;
+  background: linear-gradient(180deg, #ff7458, #ff5e48);
+  font-weight: 600;
+  max-width: 15em;
+  font-size: 0.9em;
+  white-space: nowrap;
+  background-position: center;
+  will-change: background-color, background-size;
+  transition: background-color 0.7s, background-size 0.7s;
+  margin-left: 58vh;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+  border: none;
+}
+
+.get-the-app-button:hover {
+  background: #ff7458 radial-gradient(circle, transparent 1%, #ff7458 1%)
+    center/15000%;
+}

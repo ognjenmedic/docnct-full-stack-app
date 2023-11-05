@@ -14,8 +14,6 @@ body {
   background-blend-mode: overlay;
   display: flex;
   align-items: center;
-  .call-container {
-  }
 }
 
 .call-container .background-image {
