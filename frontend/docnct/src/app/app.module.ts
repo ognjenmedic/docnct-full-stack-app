@@ -29,6 +29,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ModalComponent } from "./components/modal/modal.component";
 import { GetTheAppButtonComponent } from './components/get-the-app-button/get-the-app-button.component';
+import { ModalBottomSectionComponent } from './components/modal-bottom-section/modal-bottom-section.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { GetTheAppButtonComponent } from './components/get-the-app-button/get-th
     DoctorInfoComponent,
     ModalComponent,
     GetTheAppButtonComponent,
+    ModalBottomSectionComponent,
   ],
   imports: [
     BrowserModule,

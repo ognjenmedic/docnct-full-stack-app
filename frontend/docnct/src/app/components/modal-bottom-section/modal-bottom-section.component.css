@@ -1,0 +1,104 @@
+.bottom-section {
+  display: flex;
+  flex-direction: column;
+  /* min-height: 30%;
+  max-height: 40%; */
+
+  padding: 0.5em;
+  background-color: #e7f3fb;
+  align-items: center; /* Vertically align items in the center */
+  flex-grow: 1; /* Allow it to grow more than other sections */
+  justify-content: flex-end; /* This ensures that children align to the start/left */
+  margin-top: 1em; /* Adjust the top margin to control spacing */
+}
+
+.bottom-section .d-flex {
+  align-items: flex-start;
+  padding-top: 0.5em;
+}
+
+.logo-container,
+.title-container {
+  display: flex; /* Use flexbox to control layout */
+  align-items: center; /* Vertically center items */
+  flex-direction: row; /* Make them row-direction */
+  margin: 0; /* Remove any default margins */
+  padding: 0; /* Remove any default padding */
+}
+
+.logo-container {
+  flex: 0;
+  display: flex;
+  align-items: center;
+  padding: 0%;
+}
+
+.logo {
+  width: 4em;
+}
+
+.title-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Stack title and subtitle vertically */
+  justify-content: flex-start; /* Start alignment on the vertical axis */
+  align-items: flex-start; /* Vertically centering title and subtitle */
+  /* padding-left: 0.2em; */
+  margin-left: 0.2em; /* Add some space between logo and title */
+}
+
+.title {
+  color: #333;
+  font-weight: 600;
+  margin: 0;
+  font-size: 0.93em;
+  text-align: left;
+}
+
+.subtitle {
+  color: #333;
+  font-size: 0.8em;
+}
+
+.bottom-section .bullet-points {
+  list-style-type: none;
+}
+
+.bullet-points {
+  display: flex;
+  flex-direction: column; /* Change to column */
+  grid-template-columns: auto 1fr; /* Icon takes up auto width, text takes up remaining space */
+  grid-gap: 0em; /* Adjust the vertical spacing between bullet points */
+  align-items: flex-start;
+  flex: 1; /* Allow it to grow and take up remaining space */
+  margin-left: 0; /* Adjust the space for the bullet points */
+  color: #334754;
+  font-size: 0.7em;
+  list-style-type: none; /* Remove default bullets */
+  padding-left: 0; /* Remove padding */
+  position: relative; /* Change to relative positioning */
+  top: 0; /* Reset top */
+  left: 0; /* Reset left */
+  margin: 0; /* Remove any margin */
+  margin-top: -1em;
+  padding: 0; /* Remove any padding */
+}
+
+.bullet-points .d-flex {
+  align-items: center;
+  margin-bottom: 0.5em; /* Add some vertical spacing between bullet points */
+}
+
+#bullet-icon {
+  color: #1e95b6; /* Color of the checkmark */
+  font-size: 1.4rem;
+  padding: 0; /* Remove padding around the icon */
+  margin-right: 0.25em;
+  margin-left: 0.1em;
+}
+
+.get-the-app-button {
+  position: absolute;
+  bottom: 1em; /* Adjust as needed */
+  right: 1em; /* Adjust as needed */
+}
