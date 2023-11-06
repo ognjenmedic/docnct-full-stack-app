@@ -58,7 +58,7 @@ body {
 @media screen and (max-width: 600px) {
   .mobile-emulator {
     width: auto;
-    height: 90vh; /* Take full height of the viewport */
+    height: 100vh; /* Take full height of the viewport */
     margin: 0;
     border-radius: 0;
     box-shadow: none;
@@ -73,7 +73,7 @@ body {
   }
 
   .phone-content {
-    height: auto; /* Allow it to expand as needed */
+    height: 100%; /* Allow it to expand as needed */
     overflow-y: auto; /* Add scrolling if content is taller than the screen */
     margin-top: 0; /* Remove any top margin */
     margin-bottom: 0; /* Remove any bottom margin */
