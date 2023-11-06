@@ -73,7 +73,7 @@ body {
   }
 
   .phone-content {
-    height: 100%; /* Allow it to expand as needed */
+    height: fit-content; /* Allow it to expand as needed */
     overflow-y: auto; /* Add scrolling if content is taller than the screen */
     margin-top: 0; /* Remove any top margin */
     margin-bottom: 0; /* Remove any bottom margin */
