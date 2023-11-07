@@ -30,6 +30,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ModalComponent } from "./components/modal/modal.component";
 import { GetTheAppButtonComponent } from './components/get-the-app-button/get-the-app-button.component';
 import { ModalBottomSectionComponent } from './components/modal-bottom-section/modal-bottom-section.component';
+import { VhAdjustDirective } from './vh-adjust.directive';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { ModalBottomSectionComponent } from './components/modal-bottom-section/m
     ModalComponent,
     GetTheAppButtonComponent,
     ModalBottomSectionComponent,
+    VhAdjustDirective,
   ],
   imports: [
     BrowserModule,
