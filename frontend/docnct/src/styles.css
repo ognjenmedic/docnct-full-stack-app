@@ -8,7 +8,7 @@ html {
     #472933
   ); /* Change #333 and #666 to your desired gradient colors */
 
-  overflow: hidden;
+  overflow: auto;
   z-index: 1;
 }
 

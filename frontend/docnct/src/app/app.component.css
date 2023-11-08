@@ -49,7 +49,7 @@ body {
   display: flex; /* Make sure it's a flex container */
   flex-direction: column; /* Stack children vertically */
   flex: 1; /* Flex children should expand to fill the container */
-  max-height: 844px; /* Explicit max-height to ensure scrolling */
+  height: 100%; /* Fill the height */
   overflow-y: auto; /* Scroll if needed */
 }
 
