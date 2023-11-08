@@ -4,6 +4,9 @@
 
 .navbar {
   background: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar-brand {
@@ -11,7 +14,7 @@
 }
 
 .navbar-container {
-  position: relative;
+  /* position: relative; */
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   height: 60px;
 }
