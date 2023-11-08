@@ -7,7 +7,7 @@ html,
 body {
   height: 100%;
   margin: 0; /* Reset any default margin */
-  overflow: hidden; /* Avoid scrollbars on the body itself */
+  overflow: auto; /* Avoid scrollbars on the body itself */
 }
 
 /* General styles for body content */
