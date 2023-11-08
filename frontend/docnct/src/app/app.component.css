@@ -3,6 +3,13 @@ picture {
   width: 100%;
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0; /* Reset any default margin */
+  overflow: hidden; /* Avoid scrollbars on the body itself */
+}
+
 /* General styles for body content */
 .body-content {
   flex-grow: 1; /* Grow to fill the space */
@@ -58,7 +65,7 @@ body {
 @media screen and (max-width: 600px) {
   .mobile-emulator {
     width: 100%; /* Full width */
-    max-height: 100%; /* Full height of the parent */
+    height: 100%; /* Full height of the parent */
     margin: 0;
     border-radius: 0;
     box-shadow: none;
@@ -73,9 +80,10 @@ body {
   }
 
   .phone-content {
-    height: fit-content; /* Allow it to expand as needed */
+    height: auto; /* Let it be as tall as its content */
     overflow-y: auto; /* Add scrolling if content is taller than the screen */
     margin-top: 0; /* Remove any top margin */
     margin-bottom: 0; /* Remove any bottom margin */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
   }
 }
