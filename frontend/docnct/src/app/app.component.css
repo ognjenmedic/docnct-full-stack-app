@@ -57,8 +57,8 @@ body {
 /* Style overrides for mobile screens */
 @media screen and (max-width: 600px) {
   .mobile-emulator {
-    width: auto;
-    height: 100vh; /* Take full height of the viewport */
+    width: 100%; /* Full width */
+    max-height: 100%; /* Full height of the parent */
     margin: 0;
     border-radius: 0;
     box-shadow: none;
