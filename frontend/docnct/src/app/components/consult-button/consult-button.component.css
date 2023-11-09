@@ -2,21 +2,17 @@
   position: fixed;
   bottom: 0;
   left: 50%;
-  /* transform: translateX(-50%); */
-  z-index: 1000; /* Ensure it's above other content */
+  z-index: 1000;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-top: 10px; */
-  /* margin-bottom: 5vh; */
 
   width: 100%;
   padding: 0.5em;
-  /* position: absolute; */
+
   bottom: 0;
   left: 0;
-  /* box-shadow: -1px -1px 1em 1px rgba(0, 0, 0, 0.15); */
   display: flex;
   justify-content: space-evenly;
   align-items: center;

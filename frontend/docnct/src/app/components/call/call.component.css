@@ -27,11 +27,9 @@ body {
 }
 
 .image-container {
-  /* position: relative; */
   width: 100%;
   padding: 0 0.5em;
   overflow: visible;
-  /* margin-bottom: 1.5em; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,12 +49,6 @@ body {
   box-shadow: 0 0 1em 1px rgba(0, 0, 0, 0.15);
   border-radius: 50%;
   object-fit: cover;
-
-  /* margin-top: -100px;
-
-  background-image: url('/assets/doctor.jpg');
-  background-size: cover;
-  background-position: center bottom; */
 }
 
 .doctor-name {
@@ -90,7 +82,6 @@ body {
 
 @media (max-width: 600px) {
   .image-container {
-    /* Add these styles to center the doctor image */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -99,14 +90,11 @@ body {
   }
 
   .doctor-image {
-    /* Remove the width and height, and adjust other styles as necessary */
-    /* width: 100%; */
-    /* height: auto; */
-    max-width: 8em; /* Set a maximum width if needed */
-    max-height: 8em; /* Set a maximum height if needed */
+    max-width: 8em;
+    max-height: 8em;
   }
 
   .call-container {
-    background-position: center top; /* Adjust background position */
+    background-position: center top;
   }
 }
