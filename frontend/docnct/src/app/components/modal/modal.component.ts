@@ -10,7 +10,6 @@ import { AnimationEvent } from "@angular/animations";
 })
 export class ModalComponent implements OnInit {
   @Output() closed = new EventEmitter<void>();
-  // Add this flag to control the animation state
   isExiting = false;
 
   constructor() {}
@@ -18,7 +17,7 @@ export class ModalComponent implements OnInit {
   ngOnInit(): void {}
 
   onClose() {
-    this.isExiting = true; // Start the exit animation
+    this.isExiting = true;
   }
 
   animationDone(event: AnimationEvent) {

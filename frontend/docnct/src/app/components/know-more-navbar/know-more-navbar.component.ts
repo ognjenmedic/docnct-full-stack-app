@@ -34,14 +34,12 @@ export class KnowMoreNavbarComponent implements OnInit {
 
   toggleMenu() {
     if (this.showMenu) {
-      // Assuming you have a reference to the modal component
       this.modalComponent.startExitAnimation();
     } else {
       this.showMenu = true;
     }
   }
 
-  // This method will be called when the modal's exit animation is done
   closeModal() {
     this.showMenu = false;
   }

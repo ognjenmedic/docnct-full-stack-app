@@ -12,8 +12,6 @@ import { SpecialtyService } from "src/app/services/specialty.service";
   styleUrls: ["./doctor-card.component.css"],
 })
 export class DoctorCardComponent implements OnInit, OnDestroy {
-  // @Output()
-  // doctor!: Doctor;
   selectedDoctor!: Doctor;
   doctors: Doctor[];
   displayedDoctors: Doctor[];

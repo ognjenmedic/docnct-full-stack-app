@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class ToggleComponentsService {
   headerVisible!: Boolean;
@@ -14,8 +14,6 @@ export class ToggleComponentsService {
   howItWorksVisible: Boolean;
 
   constructor() {
-    // this.headerVisible = false;
-    // this.specialtiesVisible = false;
     this.navbarVisible = false;
     this.doctorCardVisible = false;
     this.knowMoreVisible = false;
@@ -91,8 +89,6 @@ export class ToggleComponentsService {
   toggleDoctorMoreInfo() {}
 
   logoClickNavbar() {
-    // this.showHeader();
-    // this.showSpecialties();
     this.hideNavbar();
     this.hideDoctorCard();
   }

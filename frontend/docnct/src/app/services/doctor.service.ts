@@ -3,7 +3,6 @@ import { Doctor } from "./../models/doctor";
 import { Injectable } from "@angular/core";
 import { BehaviorSubject, Observable, of } from "rxjs";
 import { environment } from "src/environments/environment";
-// import { DOCTORS } from "src/db-data";
 
 @Injectable({
   providedIn: "root",

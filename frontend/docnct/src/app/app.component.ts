@@ -14,8 +14,6 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.toggleComponent.showHeader();
     this.toggleComponent.showSpecialties();
-    // this.toggleComponent.headerVisible;
-    // this.toggleComponent.showSpecialties;
   }
 
   ngOnDestroy(): void {

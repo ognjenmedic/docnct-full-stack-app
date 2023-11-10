@@ -2,6 +2,15 @@
   background-color: white;
 }
 
+.app-navbar,
+.app-search {
+  position: sticky;
+  top: 0;
+  /* left: 0;
+  width: 100%; */
+  z-index: 1300;
+}
+
 .title {
   box-sizing: border-box;
   font-size: 14px;

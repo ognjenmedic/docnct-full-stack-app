@@ -18,8 +18,6 @@ export class DoctorDetailsComponent implements OnInit {
 
   showMoreInfo: boolean;
 
-  // howItWorksEnabled = true;
-
   constructor(
     private doctorService: DoctorService,
     private route: ActivatedRoute

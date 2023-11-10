@@ -6,12 +6,10 @@ app-more-info {
 }
 
 .info-card {
-  margin: 5% auto; /* Top and bottom margin with auto horizontal margin */
-  max-width: none; /* Allow it to stretch as needed on small screens */
-  width: 100%; /* Use full width on small screens */
-  width: calc(
-    100% - 1em
-  ); /* Full width minus some padding on smaller screens */
+  margin: 5% auto;
+  max-width: none;
+  width: 100%;
+  width: calc(100% - 1em);
   border-radius: 15px;
 
   opacity: 0;
@@ -19,7 +17,7 @@ app-more-info {
   animation: fadeAndSlide 0.5s ease forwards;
 
   z-index: 500;
-  height: auto; /* Allow it to expand as needed */
+  height: auto;
 }
 
 @keyframes fadeAndSlide {
@@ -105,11 +103,3 @@ app-more-info {
   padding: 3% 0 5% 0;
   line-height: 1;
 }
-
-/* @media (max-width: 600px) {
-  .info-card {
-    margin: 5% auto;  Adjust margin to ensure it is centered and has less space at the bottom 
-    max-width: none;  Allow it to stretch as needed on small screens 
-    width: 100%;  Use full width on small screens 
-  }
-} */
