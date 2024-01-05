@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/doctors")
-@CrossOrigin(origins="http://54.197.133.211")
+@CrossOrigin(origins = "https://www.docpal.app")
 public class DoctorController {
 
     @Autowired
