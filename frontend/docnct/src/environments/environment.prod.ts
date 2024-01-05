@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiBaseUrl: "http://www.docpal.app",
+  apiBaseUrl: "https://www.docpal.app",
 };
