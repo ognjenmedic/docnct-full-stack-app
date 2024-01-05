@@ -18,4 +18,4 @@ services:
       context: ./frontend/docnct
       dockerfile: Dockerfile
     ports:
-      - 80:80
+      - 81:80

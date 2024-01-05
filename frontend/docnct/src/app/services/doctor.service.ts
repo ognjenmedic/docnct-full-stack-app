@@ -13,7 +13,7 @@ export class DoctorService {
 
   constructor(private http: HttpClient) {
     this.doctor = new BehaviorSubject(null);
-    this.baseUrl = `${environment.apiBaseUrl}/doctors`;
+    this.baseUrl = `${environment.apiBaseUrl}/api/doctors`;
   }
 
   getDoctorsBySpecialty(specialty: string): Observable<Doctor[]> {
