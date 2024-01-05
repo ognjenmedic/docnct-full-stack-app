@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("specialties")
+@RequestMapping("/api/specialties")
 @CrossOrigin(origins="http://54.197.133.211")
 public class SpecialtyController {
     @Autowired
