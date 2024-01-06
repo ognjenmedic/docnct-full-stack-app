@@ -26,7 +26,7 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**").allowedOrigins("https://www.docpal.app");
+                registry.addMapping("/**").allowedOrigins("http://54.197.133.211");
             }
         };
     }
