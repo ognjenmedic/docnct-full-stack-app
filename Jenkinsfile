@@ -36,9 +36,6 @@ pipeline {
                 withCredentials([usernamePassword(credentialsId: 'myRDSSecret', usernameVariable: 'DB_USER', passwordVariable: 'DB_PASS')]) {
                     script {
                         // Diagnostic steps
-                        echo "DB_USER is: $DB_USER"
-                        echo "DB_PASS is: ****"
-                        
                         sh "ls -al" // List everything in the current directory
                         sh "ls -al backend/spring-boot-docnct/target/" // List contents of target directory
                         
