@@ -7,10 +7,7 @@ import { HeaderComponent } from "./components/header/header.component";
 import { DoctorCardComponent } from "./components/doctor-card/doctor-card.component";
 import { SearchComponent } from "./components/search/search.component";
 import { SpecialtiesComponent } from "./components/specialties/specialties.component";
-import { StatisticsComponent } from "./components/statistics/statistics.component";
 import { HospitalsComponent } from "./components/hospitals/hospitals.component";
-import { TestimonialsComponent } from "./components/testimonials/testimonials.component";
-import { BlogFeedComponent } from "./components/blog-feed/blog-feed.component";
 import { DownloadAppComponent } from "./components/download-app/download-app.component";
 import { ToggleComponentsService } from "./services/toggle-components.service";
 import { NavbarComponent } from "./components/navbar/navbar.component";
@@ -28,9 +25,9 @@ import { DoctorInfoComponent } from "./components/doctor-info/doctor-info.compon
 import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ModalComponent } from "./components/modal/modal.component";
-import { GetTheAppButtonComponent } from './components/get-the-app-button/get-the-app-button.component';
-import { ModalBottomSectionComponent } from './components/modal-bottom-section/modal-bottom-section.component';
-import { VhAdjustDirective } from './vh-adjust.directive';
+import { GetTheAppButtonComponent } from "./components/get-the-app-button/get-the-app-button.component";
+import { ModalBottomSectionComponent } from "./components/modal-bottom-section/modal-bottom-section.component";
+import { VhAdjustDirective } from "./vh-adjust.directive";
 
 @NgModule({
   declarations: [
@@ -39,10 +36,7 @@ import { VhAdjustDirective } from './vh-adjust.directive';
     DoctorCardComponent,
     SearchComponent,
     SpecialtiesComponent,
-    StatisticsComponent,
     HospitalsComponent,
-    TestimonialsComponent,
-    BlogFeedComponent,
     DownloadAppComponent,
     NavbarComponent,
     HowItWorksComponent,
