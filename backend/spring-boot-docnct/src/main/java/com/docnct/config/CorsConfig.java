@@ -26,7 +26,7 @@
             return new WebMvcConfigurer() {
                 @Override
                 public void addCorsMappings(CorsRegistry registry) {
-                    registry.addMapping("/**").allowedOrigins("http://54.197.133.211:81");
+                    registry.addMapping("/**").allowedOrigins("http://54.197.133.211");
                 }
             };
         }
