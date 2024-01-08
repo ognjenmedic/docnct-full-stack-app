@@ -4,6 +4,7 @@ import com.docnct.entity.Specialty;
 import com.docnct.service.SpecialtyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +13,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("specialties")
+@CrossOrigin(origins="http://54.197.133.211")
+
 public class SpecialtyController {
     @Autowired
     SpecialtyService specialtyService;
