@@ -49,6 +49,14 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-secretsmanager</artifactId>
+			<version>1.12.632</version>
+		</dependency>
+
+
+
 	</dependencies>
 
 	<build>
