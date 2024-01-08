@@ -33,27 +33,24 @@ pipeline {
 
         stage('Build & Deploy with Docker Compose') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'myRDSSecret', usernameVariable: 'DB_USER', passwordVariable: 'DB_PASS')]) {
-                    script {
-                        // Diagnostic steps
-                        sh "ls -al" // List everything in the current directory
-                        sh "ls -al backend/spring-boot-docnct/target/" // List contents of target directory
+                script {
+                    // Diagnostic steps
+                    sh "ls -al" // List everything in the current directory
+                    sh "ls -al backend/spring-boot-docnct/target/" // List contents of target directory
                         
-                        withEnv(["SPRING_DATASOURCE_USERNAME=${DB_USER}", "SPRING_DATASOURCE_PASSWORD=${DB_PASS}"]) {
-                            sh """
-                                docker stop springboot-container || true
-                                docker rm springboot-container || true
-                                docker-compose -f docker-compose.prod.yml build
-                                docker-compose -f docker-compose.prod.yml down
-                                docker-compose -f docker-compose.prod.yml up -d
-
-                            """
-                        }
-                    }
+                    // No need for withEnv or withCredentials here
+                    sh """
+                        docker stop springboot-container || true
+                        docker rm springboot-container || true
+                        docker-compose -f docker-compose.prod.yml build
+                        docker-compose -f docker-compose.prod.yml down
+                        docker-compose -f docker-compose.prod.yml up -d
+                    """
                 }
             }
         }
     }
-
-
 }
+
+
+
