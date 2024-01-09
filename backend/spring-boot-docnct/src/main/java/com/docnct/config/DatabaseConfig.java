@@ -1,5 +1,7 @@
 package com.docnct.config;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import com.docnct.service.SecretsManagerService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,7 +15,7 @@ import java.util.Map;
 public class DatabaseConfig {
 
     private final SecretsManagerService secretsManagerService;
-
+    private static final Logger logger = LoggerFactory.getLogger(DatabaseConfig.class);
     public DatabaseConfig(SecretsManagerService secretsManagerService) {
         this.secretsManagerService = secretsManagerService;
     }
@@ -23,13 +25,16 @@ public class DatabaseConfig {
         Map<String, String> dbCredentials = secretsManagerService.getSecrets("prod/docnct/mysql");
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
 
-        String jdbcUrl = "jdbc:mysql://" + dbCredentials.get("url") +
-                ":3306/docnct_db?useSSL=false";
+        String jdbcUrl = "jdbc:mysql://" + dbCredentials.get("host") +
+                ":3306/" + dbCredentials.get("dbname") + "?useSSL=false&allowPublicKeyRetrieval=true";
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         dataSource.setUrl(jdbcUrl);
         dataSource.setUsername(dbCredentials.get("username"));
         dataSource.setPassword(dbCredentials.get("password"));
+
+        logger.info("Configured JDBC URL (without credentials): {}", jdbcUrl);
         return dataSource;
     }
+
 
 }
