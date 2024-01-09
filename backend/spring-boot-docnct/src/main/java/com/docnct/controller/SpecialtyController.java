@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("specialties")
-@CrossOrigin(origins="http://44.194.89.78:81")
+@CrossOrigin(origins="https://docpal.app")
 
 public class SpecialtyController {
     @Autowired
