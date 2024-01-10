@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/specialties")
+@RequestMapping("/api/specialties")
 @CrossOrigin(origins="https://docpal.app")
 
 public class SpecialtyController {
