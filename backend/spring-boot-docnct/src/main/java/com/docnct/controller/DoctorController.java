@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("doctors")
-@CrossOrigin(origins="https://docpal.app")
+@CrossOrigin(origins="http://44.194.89.78:81")
 
 public class DoctorController {
 

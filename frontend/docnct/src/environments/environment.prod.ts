@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiBaseUrl: "https://docpal.app",
+  apiBaseUrl: "http://44.194.89.78:8081",
 };
