@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/doctors")
+@RequestMapping("doctors")
 @CrossOrigin(origins="https://docpal.app")
 
 public class DoctorController {
