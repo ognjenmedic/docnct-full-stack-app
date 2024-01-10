@@ -19,7 +19,7 @@ export class SpecialtyService {
 
   getSpecialties(): Observable<Specialty[]> {
     return this.http.get<Specialty[]>(
-      `${this.baseUrl}/specialties/findAllSpecialties`
+      `${this.baseUrl}/api/specialties/findAllSpecialties`
     );
   }
 
